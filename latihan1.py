@@ -26,3 +26,9 @@ class Customer(object):
         dollars."""
         self.balance += amount
         return self.balance
+
+nano = Customer("Haji", 120.0)
+print nano.name
+print nano.balance
+print nano.withdraw(100.0)
+print nano.deposit(200.0)
