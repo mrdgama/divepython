@@ -13,6 +13,9 @@ class Customer(object):
         self.name = name
         self.balance = balance
 
+    def set_balance(self, balance=0.0):
+        self.balance = balance
+
     def withdraw(self, amount):
         """Return the balance remaining after withdrawing *amount*
         dollars."""
@@ -27,7 +30,8 @@ class Customer(object):
         self.balance += amount
         return self.balance
 
-nano = Customer("Haji", 120.0)
+nano = Customer("Haji", 0.0)
+print nano.set_balance(400)
 print nano.name
 print nano.balance
 print nano.withdraw(100.0)
